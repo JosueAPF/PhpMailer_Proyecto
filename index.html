@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="contactos.php" method="POST">
+        <br></hr>
+        <label>Asignacion del Curso</label>
+        <hr>
+        <input type="text" name="name" id="participante" placeholder="nombre y apellido " required>
+        <input type="email" id="AlumnoEmail" name="email" placeholder="ingresa tu Email" required>
+        <input type="text" id="Nombre_Curso" name="nombre_curso" required > 
+        <input type="text" id="id_Curso" name="id_curso" required > 
+        <input type="text" id="dia_curso" name="dia_curso" required > 
+        <input type="text" id="Horario_curso" name="horario_curso" required > 
+        <input type="text" id="Precio_curso" name="precio_curso" required > 
+        <input type="text" id="Descripcion_curso" name="descripcion_curso" required > 
+        <input type="hidden" name="_captcha" value="false"> 
+        <input type="hidden" name="_subject" value="Confirmación de Inscripción">
+        <br id="SeccionFormulario">
+        <button type="submit" id="BTN_Mandar_Solicitud">Enviar</button>
+    </form>
+    
+</body>
+</html>
