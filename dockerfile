@@ -3,6 +3,8 @@ FROM php:8.1-apache
 
 # Copiar los archivos de tu proyecto al contenedor
 COPY . /var/www/html/
+RUN sed -i 's/DirectoryIndex index.php index.html/# DirectoryIndex index.php index.html/' /etc/apache2/apache2.conf
+
 
 # Instalar las dependencias necesarias (si las tienes, como PHPMailer)
 RUN apt-get update && apt-get install -y \
