@@ -32,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
-
         // Enviar al participante
         $mail->setFrom('noreply@tusitio.com', 'Inscripciones');
         $mail->addAddress($email, $name); // Correo del participante
