@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Enviar al participante
         $mail->setFrom('noreply@tusitio.com', 'Inscripciones');
         $mail->addAddress($email, $name); // Correo del participante
-        $mail->Subject = 'Confirmación de Inscripción';
+        $mail->Subject = 'Confirmacion de Inscripcion';
 
         $mail->Body = "Hola $name,\n\nGracias por inscribirte en el curso '$nombre_curso'. Aqui estan los detalles del curso:\n\n"
                     . "ID del Curso: $id_curso\n"
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Enviar al administrador (tú mismo)
         $mail->setFrom('noreply@tusitio.com', 'Inscripciones');
         $mail->addAddress('josueporras124@gmail.com'); // Correo del administrador
-        $mail->Subject = 'Nueva Inscripción en el Curso';
+        $mail->Subject = 'Nueva Inscripcion en el Curso';
         
         $mail->Body = "Un nuevo participante se ha inscrito en el curso. Aqui estan los detalles:\n\n"
                     . "Nombre: $name\n"
