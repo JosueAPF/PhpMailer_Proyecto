@@ -69,13 +69,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->send();
 
         //echo 'Los mensajes fueron enviados correctamente.';
-        echo '<div id="message" style="background-color: #28a745; color: white; padding: 10px; border-radius: 5px;">Los mensajes fueron enviados correctamente.</div>';
-        echo '<a href="javascript:history.back()">Regresar</a>';
         echo '<script>
             setTimeout(function() {
                 document.getElementById("message").style.display = "none";
-            }, 5000); // desparecera en 5 segundos
+            }, 5000); // El mensaje desaparecerá después de 5 segundos
         </script>';
+        echo '<hr><br>';
+        echo '<a href="javascript:history.back(-1)" style="
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: blue; 
+        color: white; 
+        text-decoration: none; 
+        font-size: 16px; 
+        border-radius: 5px; 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+        transition: background-color 0.3s, transform 0.2s;">
+        Regresar
+    </a>';
+    
+        echo '<div id="BannerConte" style="
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background-color: #f4f4f4;">
+    <img src="./img/Banner.png" alt="Imagen de éxito" style="
+        width: 800px; 
+        height: auto; 
+        border-radius: 10px; 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+</div>';
     } catch (Exception $e) {
         echo "Error al enviar el mensaje: {$mail->ErrorInfo}";
     }
